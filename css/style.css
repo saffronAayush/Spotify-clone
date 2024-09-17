@@ -1,0 +1,610 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+padding: 0;
+margin:0;
+box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    display: none;
+}
+.right::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+    display:inline;
+}
+
+
+::-webkit-scrollbar-track {
+    /* margin: 10px; */
+
+    background: transparent;
+    border-radius: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 12px;
+    ;; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #aaa;
+}
+
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+
+
+body{
+background-color: black;
+height: 100vh;
+display: flex;
+/* justify-content: space-between; */
+padding: 8px;
+font-family: "Varela Round", sans-serif;
+box-sizing: border-box;
+}
+
+.left{
+    min-height: 584px;
+background-color: black;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: auto;
+    transition: all;
+    transition-duration: 0.6s;
+}
+
+.home-container{
+    padding: 15px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    /* min-height: 170px; */
+    height: 20%;
+}
+.hello{
+    display: flex;
+    justify-content: space-between;
+}
+.cross{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+
+}
+.cross:hover{
+    background-color: #232323;
+}
+.home{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    transition: all;
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
+}
+.home:hover{
+    color: white;   
+}
+
+.library{
+    padding: 15px 25px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+    height: 75%;
+
+    /* min-height: 550px; */
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-icon{
+    display: flex;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 100px;
+}
+.play-card-container{
+    margin-top: 10px;
+
+width: 100%;
+max-height: 400px;
+display: flex;
+flex-direction: column;
+gap: 4px;
+align-items: center;
+overflow: auto;
+
+
+}
+.play-card{
+    display: flex;
+    background-color: #222121;
+    width: 100%;
+    
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 8px;
+}
+.play-card:hover{
+    background-color: #1c1c1c;
+
+}
+.play-card .image{
+    
+    width: 10%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.play-card .details{
+    
+    width: 80%;
+    overflow: hidden;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.details .song-name{
+    
+    max-height: 25px;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+}
+.details .artist-name{
+    
+    font-size: 9px;
+    height: 15px;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.play-card .play{
+    display: flex;
+    justify-content: center;
+    
+    width: 10%;
+    overflow: hidden;
+}
+.down{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tail{
+    
+    width: 100%;
+    height: 48px ;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+.tail div{
+    margin-right: 14px;
+}
+.tail a{
+    font-size: 10px;
+}
+.lang-capsule{
+    display: flex;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #b3b3b3;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 90px;
+    border-radius: 020px;
+    padding: 5px 15px;
+}
+.lang-capsule:hover{
+    border-color: white;
+    width: 91px;
+    
+    color: white;
+}
+
+
+
+.seprator{
+    height: 90vh;
+    border: 1px solid rgb(36, 35, 35);
+    position: absolute;
+    left: 362px;
+    top: 5vh;
+    border-radius: 10px;
+    display: none;
+}
+
+
+.right{
+    margin-left: 10px;
+    min-height: 584px;
+    width: calc(100vw - 380px);
+    overflow: overlay;
+    scrollbar-gutter: auto;
+    position: relative;
+  }
+
+.nav{
+    background-color: #101010;
+    background: linear-gradient(180deg, #101010, #101010 , transparent 80px);
+    position: sticky;
+    top: 0px;
+    height: 60px;
+    border-radius:10px 10px 0 0  ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 22px;
+
+}
+.navigation{
+    display: flex;
+    gap: 10px;
+}
+.hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 6px;
+    cursor: pointer;
+    display: none;
+}
+.hamburger:hover{
+    background-color: #222121;
+}
+/* .navigation span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50px;
+    background-color: rgb(9, 9, 9);
+} */
+.sign-in-log-in .btn{
+    font-weight: bold;
+    width: 90qh;
+    padding: 15px 21px;
+    border: none;
+    /* background-color: white; */
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn:hover{
+    font-size: 14px;
+}
+
+.sign-in {
+    background-color: transparent;
+
+/* border: 1px solid red; */
+
+    color: gray;
+}
+.sign-in a{
+    display: block;
+
+    /* border: 1px solid blue; */
+    color: gray;
+}
+.log-in a{
+    color: black;
+}
+.sign-in  a:hover{
+    color: white;
+    font-size: 14px;
+}
+
+.main{
+    width: 100%;
+
+    height: calc(100% + 100px);
+    min-height: 580px;
+
+    background: linear-gradient(180deg,#1d1d1d 0px,#101010 180px);
+    overflow: overlay;
+}
+
+.album-container{
+    margin: 30px 5px 0 15px;
+color: white;
+display: flex;
+flex-direction: column;
+gap: 10px;
+    }
+.album-container-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.showall a{
+    color: white;
+}
+.showall a:hover{
+    color: rgb(65, 64, 64);
+}
+
+.album-cards-container{
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    
+
+}
+.album-card{
+    height: 260px;
+    width: 50%;
+    max-width: 230px;
+
+    min-width: 200px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.album-card:hover{
+    background-color:#222121;
+}
+.album-card .details{
+    width: 85%;
+    height: 100%;
+    margin: auto;
+}
+.album-card .image{
+    width: 100%;
+    height: 70%;
+    margin-bottom: 7px;
+    overflow: hidden;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.album-card .album-name{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.album-card .album-artists{
+    color: #b3b3b3;
+    font-size: 14px;
+
+}
+
+.player{
+    position: fixed;
+    /* bottom: -100px; */
+    left: 368px;
+    top: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    background-color: #99c493;
+    background: linear-gradient(0deg, #889c86, transparent 110px);
+    background: linear-gradient(0deg, #091801, #131611, transparent 150px);    box-shadow: 0px -1px 10px 0px black;
+    width: calc(100vw - 390px);
+    height: 100px;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    padding: 0 8px;
+
+}
+.block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0;
+}
+.block .info{
+    display: flex;
+    font-size: 15px;
+    /* border: 1px solid red; */
+width: 34%;
+    flex-direction: column;
+    gap: 15px;
+}
+.info .title{
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+.info .duration{
+    font-size: 12px;
+    color: #888;
+}
+.play-buttons{
+    display: flex;
+    gap: 6px;
+    /* border: 1px solid black; */
+    width: 105px;
+    position: absolute;
+    left: calc(50% - 52px);
+
+}
+.icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.icon-box:hover{
+   background-color: #232e1d;
+}
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.volume input{
+    max-width: 100px;
+
+}
+.volume .icon{
+    cursor: pointer;
+}
+.seekbar{
+    /* border: 1px solid red; */
+    position: relative;
+    height: 10px;
+    bottom: 3px;
+}
+.tray{
+    background-color: #99c493;
+    width: 96%;
+    margin: auto;
+cursor: pointer;
+    height: 4px;
+    border-radius: 10px;
+    position: relative;
+}
+.thumb{
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 20px;
+    position: relative;
+    left: 0%;
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    bottom: 4px;
+}
+
+
+
+/* Styling the range input */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px; /* Thin height */
+    background: transparent;/* Background of the range input*/
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Webkit browsers (Chrome, Safari, etc.) */
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #a4bc8b; /* Custom track color */
+    border-radius: 3px;
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px; /* Thumb width */
+    height: 14px; /* Thumb height */
+    background: #6dc451; /* Custom thumb color */
+    cursor: pointer;
+    border-radius: 50%; /* Makes the thumb circular */
+    margin-top: -5px; /* Centers the thumb with the track */
+}
+
+/* Hover state for thumb */
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #82e062; /* Lighter shade when hovered */
+}
+
+
+
+
+
+@media only screen and (max-width: 780px) {
+    body {
+      /* background-color: lightblue; */
+      width: 100vw;
+      padding: 0;
+    }
+    .left{
+        position: absolute;
+        height: 100%;
+        z-index: 10;
+        left: -450px;
+    }
+    .library{
+        min-height: auto;
+        height: 68%;
+        overflow: auto;
+    }
+    .right{
+        width: 100%;
+        margin: 0;
+    }
+    .player{
+        /* display: none; */
+        position: fixed;
+        width: 100%;
+        left: 0;
+        z-index: 20;
+    }
+    .main{
+        height: calc(100% + 100px);
+    }
+    .hamburger{
+        display: flex;
+    }
+    .cross{
+        display: flex;
+    }
+    .album-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 415px) {
+    .left{
+        width: 100%;
+        left: -600px;
+    }
+  }

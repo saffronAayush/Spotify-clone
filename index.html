@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="161245594150-78fenkos1g1u0deo3goetkko276rs3a4.apps.googleusercontent.com
+    ">
+    <title>clone-Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="favicone.png" type="image
+    /png">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        
+
+    </style>
+</head>
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+    </script>
+    <div class="left">
+        <div class="home-container b-radius grey">
+            <div class="hello">
+            <img  width="110px" class="invert" src="svg/logo.svg" alt="spotify-log">
+            <div class="cross">
+            <img class="icon" src="svg/cross.svg" alt=""></div></div>
+            <div>
+                <a class="home grey" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="icon" src="svg/home.svg" alt="home-icon">
+                Home
+                </a>
+            </div>
+            <div >
+                <a class="home grey search " href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="icon" src="svg/search.svg" alt="search-icon">
+                Search
+                </a>
+            </div>
+
+        </div>
+
+        <div class="library grey b-radius ">
+            <div class="up">
+            <div class="heading">
+                <a class="lib-title home grey" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img class="icon" src="svg/library.svg" alt="lib-icon">
+                    Your Library
+                </a>
+                <a class="add-icon" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img class="icon" src="svg/add.svg" alt="+">
+                </a>
+            </div>
+
+            <div class="play-card-container b-radius">
+                
+
+
+            </div>
+            </div>
+            
+            <div class="down">
+            <div class="tail ">
+                <div class="more"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="grey">Legal</a></div>
+                <div class="more"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="grey">Safety & privacy Center</a></div>
+                <div class="more"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="grey">Privecy Policy</a></div>
+                <div class="more"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="grey">Cookies</a></div>
+                <div class="more"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="grey">About Ads</a></div>
+                <div class="more" ><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"class="grey">Accessibility</a></div>
+                <div class="more"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="grey">Cookies</a></div>
+            </div>
+
+            <a class="lang-capsule grey" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >
+                <img class="icon small" src="svg/lang.svg" alt="nothing">
+                English
+            </a>
+            </div>
+
+        </div>
+    </div>
+<div class="seprator">
+
+</div>
+
+    <div class="right ">
+        <div class="nav ">
+            <div class="navigation">
+
+               <span class="hamburger">
+                <img class="icon" src="svg/hamburger.svg" alt="">
+                </span>
+            </div>
+
+            <div class="sign-in-log-in">
+                <button class="btn sign-in"><div class="g-signin2" data-onsuccess="onSignIn"></div></button>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn log-in">Log In</button></a>
+            </div>
+        </div>
+        <div class="main">
+            
+           
+        
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="block">
+            <div class="info">
+                <div class="title"></div>
+                <div class="duration">
+                </div>
+            </div>
+            <div class="play-buttons">
+                <div id="previousbox" class="pre icon-box">
+                    <img class="icon" id="previous" src="svg/previous.svg" alt="">
+                </div>
+                <div id="playbox" class="play icon-box">
+                    <img class="icon " id="play" src="svg/play.svg" alt="">
+                </div>
+                <div id="nextbox" class="next icon-box">
+                    <img class="icon" id="next" src="svg/next.svg" alt="">
+                </div>
+            </div>
+            <div class="volume">
+                <img class="icon" src="svg/volume.svg" alt="">
+                <input type="range" name="volume-rocker" id="volume_rocker">
+            </div>
+        </div>
+        <div class="seekbar">
+            <div class="tray">
+                <div class="thumb"></div>
+            </div>
+        </div>
+       </div>
+
+<script src="./js/new.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+a{
+    text-decoration: none;
+
+}
+.grey{
+    background-color: #121212;
+    color: #b3b3b3;
+}
+.invert{
+    filter: invert(1);
+}
+.icon{
+    filter: invert(1);
+    width: 20px;
+}
+
+.icon-box{
+    width: 22px;
+}
+
+.b-radius{
+    border-radius: 10px;
+}
+.small{
+    width: 15px;
+}
